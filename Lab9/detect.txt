@@ -1,0 +1,4 @@
+this file will be detected
+by the program
+it will detect the number of characters 
+s p a c e s and lines

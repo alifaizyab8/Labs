@@ -1,0 +1,4 @@
+A program which works
+to detect the number
+of lines in a program and
+prefixes them accordingly

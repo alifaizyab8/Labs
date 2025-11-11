@@ -12,10 +12,10 @@ int main(void)
     for (int i = 0; i < n; i++)
     {
         printf("Enter number %d: ", i + 1);
-        scanf("%d", ptr[i]);
+        scanf("%d", (ptr + i));
         sum += ptr[i];
     }
-    printf("Sum: %d\n", sum);
+    printf("Avg: %f\n",     (float)sum / n);
     free(ptr);
     return 0;
 }

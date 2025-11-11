@@ -22,7 +22,7 @@ int main(void)
     printf("The numbers are: \n");
     for (int i = 0; i < n + 3; i++)
     {
-        printf("%d\n", ptr[i]);
+        printf("%d\n", *(ptr+i));
     }
     free(ptr);
 

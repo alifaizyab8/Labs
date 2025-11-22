@@ -52,7 +52,7 @@ void insertAtEnd(int data)
     
 }
 //Insert at any Position Function
-void insertAtAnyPosition(int data, int position);
+void insertAtAnyPosition(int data, int position)
 {
     //Remaining
 }

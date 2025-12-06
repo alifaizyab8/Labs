@@ -3,16 +3,11 @@
 #include <string.h>
 
 // Node
-struct student
-{
-    int rollNo;
-    char name[30];
-    struct student *next;
-};
+struct student { int rollNo;char name[30];struct student *next;};
 
 // Global head
 struct student *HEAD = NULL;
-
+int takeInput(int rollNo, char name[]);
 void insertAtHead(int rollNo, char name[]);
 void insertAtEnd(int rollNo, char name[]);
 void insertAtPosition(int position, int rollNo, char name[]);
@@ -44,24 +39,15 @@ int main()
         switch (choice)
         {
         case 1:
-            printf("Enter Roll number : ");
-            scanf("%d", &rollNo);
-            printf("Enter Name:\n");
-            scanf("%s", name);
+            rollNo = takeInput(rollNo, name);
             insertAtHead(rollNo, name);
             break;
         case 2:
-            printf("Enter Roll Number: ");
-            scanf("%d", &rollNo);
-            printf("Enter Name:\n");
-            scanf("%s", name);
+            rollNo = takeInput(rollNo, name);
             insertAtEnd(rollNo, name);
             break;
         case 3:
-            printf("Enter Roll Number: ");
-            scanf("%d", &rollNo);
-            printf("Enter Name:\n");
-            scanf("%s", name);
+            rollNo = takeInput(rollNo, name);
             printf("Enter position: ");
             scanf("%d", &position);
             insertAtPosition(position, rollNo, name);
@@ -80,6 +66,15 @@ int main()
             printf("Invalid choice!\n");
         }
     }
+}
+
+int takeInput(int rollNum, char name[])
+{
+    printf("Enter Roll number : ");
+    scanf("%d", &rollNum);
+    printf("Enter Name:\n");
+    scanf("%s", name);
+    return rollNum;
 }
 void insertAtHead(int rollNum, char name[])
 {
@@ -114,6 +109,7 @@ void insertAtPosition(int position, int rollNum, char name[])
     if (position == 1)
     {
         insertAtHead(rollNum, name);
+        return;
     }
 
     struct student *newStudent = malloc(sizeof(struct student));

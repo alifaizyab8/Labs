@@ -5,3 +5,8 @@ Week 11 :
 Static Variables
 Returning Pointer from a function
 Pass by Reference
+
+Week 12 :
+
+Incrementing a Pointer
+Subtraction of Pointer

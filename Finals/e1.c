@@ -12,7 +12,7 @@ int *initialize_status(int initial_value) {
 void increment_counter(int *config_status_ptr)
 {
     static int call_count = 0;
-    call_count++;printf("%d\n",call_count);
+    call_count++;printf("%d  ",call_count);
     if (call_count % 2 == 0)
     {
         if (*config_status_ptr == 1)
@@ -25,7 +25,7 @@ void increment_counter(int *config_status_ptr)
         }
         
     }
-    
+    printf("Config Status: %d\n", *config_status_ptr);
 }
 int main() {
     int *config_status = initialize_status(0);

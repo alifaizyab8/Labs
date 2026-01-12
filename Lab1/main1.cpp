@@ -8,6 +8,7 @@ public:
     // Setters for real and imaginary values
     void set_real();
     void set_img();
+    // Printing Function
     void print();
 };
 void complex_number ::set_real()

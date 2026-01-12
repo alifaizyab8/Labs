@@ -16,6 +16,7 @@ public:
         cout << "Please enter the value of Imaginary Part" << endl;
         cin >> img;
     }
+    // Printing Function
     void print()
     {
         if (img > 0)

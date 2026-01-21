@@ -23,27 +23,6 @@ public:
         rollNo = r;
     }
 
-    void setName(string n)
-    {
-        name = n;
-    }
-
-    void setAge(int a)
-    {
-        if (a > 0)
-            age = a;
-        else
-            age = 0;
-    }
-
-    void setMarks(float m)
-    {
-        if (m >= 0 && m <= 100)
-            marks = m;
-        else
-            marks = 0;
-    }
-
     // Getter
     int getRollNo() const
     {
